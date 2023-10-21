@@ -1,0 +1,126 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --white: hsl(0, 0%, 100%);
+    --Boxshadow: rgb(234, 224, 224);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Paleblue);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+.main-container{
+    background-color: var(--white);
+    width: 360px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.pic-section{
+    background-image: url(./images/illustration-hero.svg);
+    background-size: inherit;
+    background-repeat: no-repeat;
+    height: 40%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+
+.summary-section{
+    display: flex;
+    gap: 0.1rem;
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+.main-header{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--Verypaleblue);
+    padding:1rem;
+    border-radius: 1rem;
+}
+
+.pricing a {
+    font-weight: bold;
+}
+
+
+.pricing a:hover{
+    font-style: normal;
+    text-decoration: none;
+}
+
+.purchase-items{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.main-btn{
+    border-radius: 0.5rem;
+    background-color: var(--Brightblue);
+    height: 2.8rem;
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+}
+
+
+.main-btn:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--Brightblue);
+    transition: 1s;
+    border-style: solid;
+}
+
+.second-btn{
+    height: 2.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--Verypaleblue);
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+}
+
+@media screen and (max-width:500px){
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+    
+    .main-container{
+       width: 360px;
+    }
+}
